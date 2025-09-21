@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: spatially-informed-ml
+title: Spatially-Informed-ML
 version: 0.1.0
 authors:
   - family-names: Siabidi Kermanshah
@@ -8,6 +8,6 @@ authors:
     given-names: Ali
 license: MIT
 message: "If you use this software, please cite it as below."
-url: "https://github.com/yourusername/spatially-informed-ml"
+url: "https://github.com/shabnam-skr/Spatially-Informed-ML"
 date-released: 2025-09-21
 
