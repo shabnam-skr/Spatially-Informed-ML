@@ -1,0 +1,31 @@
+# populate pinned versions after installing locally
+# baseline common scientific stack (adjust as needed)
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.2
+matplotlib==3.9.2
+seaborn==0.13.2
+scipy==1.13.1
+joblib==1.4.2
+
+# Preferred: create the Conda environment defined in environment.yml
+# QUICK START (Conda)
+# 1) Install Miniconda/Anaconda
+# 2) Create env:   conda env create -f environment.yml
+#    (faster)      mamba env create -f environment.yml
+# 3) Activate:     conda activate spatially-informed-ml
+# 4) Run:          python src/Hybrid_spatially_informed_RF.py --mode train
+#
+# COMMON TASKS
+# - Update env after editing environment.yml:
+#   conda env update -f environment.yml --prune
+# - Remove env:
+#   conda remove -n spatially-informed-ml --all
+# - Quick verify:
+#   python -c "import geopandas,libpysal,esda,contextily,sklearn; print('OK')"
+#
+# USING THIS requirements.txt
+# - Use only after activating the Conda env, for pip-only extras:
+#   pip install -r requirements.txt
+# - Prefer putting geospatial/core deps in environment.yml (Conda handles native libs best).
+

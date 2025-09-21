@@ -1,0 +1,22 @@
+name: spatially-informed-ml
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - scipy
+  - seaborn
+  - matplotlib
+  - joblib
+  - geopandas
+  - libpysal
+  - esda
+  - shapely
+  - fiona
+  - rtree
+  - contextily
+
