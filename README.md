@@ -29,7 +29,7 @@ Spatial stratification partitions geospatial samples into spatially meaningful g
 ## Quickstart
 
 ### Environment
-Prefer Conda (see `environment.yml`). If using `pip`, see `requirements.txt` and ensure native geospatial libs are installed (GEOS/PROJ/GDAL via Conda is recommended).
+(see `environment.yml`). If using `pip`, see `requirements.txt` and ensure native geospatial libs are installed (GEOS/PROJ/GDAL via Conda is recommended).
 
 ### Minimal Example
 
@@ -82,7 +82,7 @@ Then run: `python src/SAC_Analysis.py`
 Sample Spatially Informed Random Forest Model (Flood Hazard) : 
 - A pre-trained Random Forest model trained with the spatially informing policy is included to showcase usage for flood hazard modeling.
 
-- The repository includes a complete spatially-aware machine learning pipeline in `src/Spatially_Informed_RF.py` that demonstrates how to use the spatial groups for robust model training.
+- The repository includes a complete spatially-aware machine learning pipeline in `src/Spatially_Informed_RF.py` that demonstrates how to use the spatial groups for robust model training in the case of flood hazard modeling.
 
 **Complete workflow:**
 ```bash
@@ -93,18 +93,7 @@ python src/SAC_Analysis.py
 python src/Spatially_Informed_RF.py
 ```
 
-**Basic spatial cross-validation concept:**
-```python
-from sklearn.model_selection import GroupKFold
-
-cv = GroupKFold(n_splits=5)
-for train_idx, test_idx in cv.split(X, y, groups=groups):
-    X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
-    y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
-    # fit/evaluate model
-```
-
-**What the full pipeline includes:**
+**Full pipeline includes:**
 - **Nested cross-validation** with hyperparameter tuning using RandomizedSearchCV
 - **Probability calibration** using IsotonicRegression to improve prediction reliability
 - **Optimal threshold selection** based on F1-score maximization

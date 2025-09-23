@@ -28,7 +28,7 @@ PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # define variables
 TARGET = str(globals().get('TARGET', "Label"))
-CSV_PATH = Path(globals().get('CSV_PATH', r"C:\Users\ASUS\Desktop\Spatially informed  ML\Ahwz_flood\data\flood data.csv"))
+CSV_PATH = Path(globals().get('CSV_PATH', r"Adress to your data file in CSV format"))
 
 # load data and validate
 df = globals().get('df')
