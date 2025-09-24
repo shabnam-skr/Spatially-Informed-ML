@@ -5,7 +5,7 @@ Leakage-Safe Validation for Geospatial ML
 </p>
 
 > Surveys have identified data leakage as a pervasive methodological flaw in 294 machine learning applications across 17 fields of study. Geoscience and remote sensing are among the most affected fields, often resulting in overoptimistic findings. One of the primary causes of data leakage in these contexts is the spatial dependency between datasets, which is called spatial autocorrelation (SAC).
-> SAC, a dominant characteristic in environmental data, can inadvertently introduce information from outside the intended training set and compromise model validity. If SAC is not properly addressed, spatial analysis can be subject to misleading conclusions where the test set is not representative of the population about which scientific claims are made.
+> SAC, a dominant characteristic in environmental data, can introduce information from outside the intended training set and compromise model validity. If SAC is not properly addressed, spatial analysis can be subject to misleading conclusions where the test set is not representative of the population about which scientific claims are made.
 
 This repository tackles that problem directly by **spatially stratifying** your data *before* training/evaluation so validation reflects real-world generalization.
 
